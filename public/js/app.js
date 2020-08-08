@@ -49798,11 +49798,13 @@ var app = new Vue({
     dtStyleObject: {
       font: '17px Arial, Verdana, Helvetica, sans-serif',
       fontWeight: 'bold',
-      color: '#000066'
+      color: '#000066',
+      fontStyle: 'none'
     },
     StyleObject2: {
       fontSize: '17px',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      textDecorationLine: 'none'
     }
   },
   methods: {
@@ -49825,13 +49827,15 @@ var app = new Vue({
       console.log("clicked on change text");
     },
     changeFont: function changeFont() {
-      this.dtStyleObject.fontWeight = 'Italic';
+      this.dtStyleObject.fontWeight = 'normal';
       this.dtStyleObject.color = "red";
+      this.dtStyleObject.fontStyle = "italic";
       this.dtStyleObject.font = "17px Times New Roman, Calibri, Candara";
     },
     changeFont2: function changeFont2() {
-      this.StyleObject2.fontSize = "100px";
-      this.StyleObject2.fontWeight = 'Italic';
+      this.StyleObject2.fontSize = "50px";
+      this.StyleObject2.fontWeight = '200';
+      this.StyleObject2.textDecorationLine = "overline underline";
       console.log("clicked on change text");
     }
   }

@@ -13,7 +13,10 @@ class ChangeFileController extends Controller
 {
     //
     public function change($file) {
-    	$command = File::move(resource_path('views/'.$file.'.php'), resource_path('views/No-Index.php'));
+    	
+		//Rename file
+    	$command = File::move(resource_path('views/'.$file.'.php'), resource_path('views/No-Index-'.$file.'.php'));
+    	//$command = File::copy(resource_path('views/'.$file.'.php'), resource_path('views/No-Index-'.$file.'.php'));
 		
 		event(new ChangeFileToNoIndex($command));
 		

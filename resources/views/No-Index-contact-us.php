@@ -215,7 +215,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
 				<button @click="switchImage">Switch Image</button><br>
 				
 				<!--Task 2-->
-				<a href="{{route('change.file', ['file' => 'contact-us'])}}"><button>No Index</button></a><br>
+				<a href="http://localhost:8000/tasks/change/contact-us"><button>No Index</button></a><br>
 				
 				<!--Task 3-->
 				<button @click="changeText">Change Text</button><br>
@@ -243,10 +243,11 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
 								
 								<!--The changes are not reflected on the page even though it's reflected on the console-->
 								<div id="padding">
-<div class="message-text"><flexi-tag :style="StyleObject2 ">{{consulting}} </flexi-tag><br /><flexi-tag><flexi-tag style="font-size:13px; font-weight:bold; "><u>Toll Free</u></flexi-tag><flexi-tag style="font-size:13px; ">: </flexi-tag><flexi-tag style="font-size:14px; ">{{number}}</flexi-tag><flexi-tag style="font-size:13px; "><br /></flexi-tag><flexi-tag style="font-size:13px; font-weight:bold; "><u>Email</u></flexi-tag><flexi-tag style="font-size:13px; ">: </flexi-tag><flexi-tag style="font-size:14px; "><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="660f0800092604030b0907050702030b0f0505090815130a120f08014805090b">{{email}}</a></flexi-tag></div><br />
+
 
 <form action="./contact-us_files/mailer.php" method="post" enctype="multipart/form-data">
 	 <div>
+	 	<div class="message-text"><flexi-tag :style="StyleObject2 ">{{consulting}} </flexi-tag><br /><flexi-tag><flexi-tag style="font-size:13px; font-weight:bold; "><u>Toll Free</u></flexi-tag><flexi-tag style="font-size:13px; ">: </flexi-tag><flexi-tag style="font-size:14px; ">{{number}}</flexi-tag><flexi-tag style="font-size:13px; "><br /></flexi-tag><flexi-tag style="font-size:13px; font-weight:bold; "><u>Email</u></flexi-tag><flexi-tag style="font-size:13px; ">: </flexi-tag><flexi-tag style="font-size:14px; "><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="660f0800092604030b0907050702030b0f0505090815130a120f08014805090b">{{email}}</a></flexi-tag></div><br />
 		<label>Name:</label> *<br />
 		<input class="form-input-field" type="text" value="" name="form[element0]" size="40"/><br /><br />
 
